@@ -2,6 +2,15 @@
 
 ant通过执行build.xml文件，来实现运行jmeter脚本，并生产报告
 
+**注意**
+
+```
+build.xml:79: taskdef class org.programmerplanet.ant.taskdefs.jmeter.JMeterTask cannot be found
+ using the classloader AntClassLoader[]
+```
+
+把文件jmeter下\extras\ant-jmeter-1.1.1.jar复制到的\lib目录下即可。
+
 ### 使用方法
 
 1.如果jmeter脚本用到mysql的驱动，则需要将mysql-connector-java-5.1.7-bin.jar放在jmeter安装目录的lib下（如果没用到则不需要）
